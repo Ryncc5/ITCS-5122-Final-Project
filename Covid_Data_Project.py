@@ -470,7 +470,7 @@ with st.beta_expander('Select States to compare: '):
             x=alt.X('Province_State:O', title='State'),
             y=alt.Y('Deaths:Q', title='Total Cases'),
             color= alt.value('steelblue'),
-            tooltip=["Province_State:N", "Cases:Q"]
+            tooltip=["Province_State:N", "Deaths:Q"]
         ).properties(
             width=700,
             height=700
