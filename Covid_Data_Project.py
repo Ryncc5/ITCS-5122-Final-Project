@@ -399,11 +399,9 @@ pois = alt.Chart(dfCountryLatLong).mark_circle().encode(
 st.title('COVID Data')
 st.header("Visual Analytics Project | Team 7");
 st.write("Cameron Ahn, Ryan Alian, Colin Braddy, Sam Carlson")
+st.write("https://github.com/Ryncc5/ITCS-5122-Final-Project")
 
 allStates = dfStateTotalDeaths['Province_State'].values.tolist()
-
-deathCol, caseCol = st.beta_columns(2)
-#caseCol, deathCol = st.beta_columns(2)
 
 with st.beta_expander('Select States to compare: '): 
     userSelectedStates = st.beta_container()
@@ -511,6 +509,8 @@ with st.beta_expander('US Data Insights'):
     st.subheader('Death Percentage of State Population')
     st.write(usDeathPopulationMap)
     
+    st.subheader('State Populations')
+    st.write(dfStatePopulation)
     
 with st.beta_expander('US Case Data'):
     #Container for Case stats
@@ -576,3 +576,4 @@ with st.beta_expander('View Original Data Sources'):
     if st.checkbox('Show World Death Data'):
         st.write("Raw Worldwide COVID Death data from Github: ")
         st.dataframe(load_raw_csv_global())
+        
